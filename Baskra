@@ -12,8 +12,8 @@ programa
 	     real bNegativo
 	     real x1
 	     real x2
-	     real boa
-	     real bom
+	     real bMaisD
+	     real bMenosD
 		escreva("Vamos fazer um calculo com baskra!\nQual o coeficiente A?\n")
 		leia(a)
 		escreva("e o coeficiente B?\n")
@@ -26,16 +26,19 @@ programa
 		{
 			bNegativo = (0 - b)
 			raiz_delta = Matematica.raiz(delta, 2) 
-			boa = (bNegativo + raiz_delta)
-			bom = (bNegativo - raiz_delta)
-			x1 = (boa/2*a)
-			x2 = (bom/2*a)
+			bMaisD = (bNegativo + raiz_delta)
+			bMenosD = (bNegativo - raiz_delta)
+			x1 = (bMaisD/2*a)
+			x2 = (bMenosD/2*a)
 			escreva("\nas raizes sao " +x1 )
 			escreva(" e " +x2)
 		}
 		senao
 		{
+			se (delta < 0)
 			escreva("\nnao a raizes possiveis para esse calculo")
+			senao 
+			escreva("\nA raiz e igual a 0")
 		}
 	}
 }
